@@ -1,0 +1,22 @@
+{% extends 'bmi/base.html'%}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">BMI Calculator</h2>
+    <form method="post" action="{% url 'bmi:bmi_calculator' %}" class="mt-4">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+    
+    {% if bmi %}
+    <div class="mt-4 alert alert-info">
+        <p><strong>Body Mass Index:</strong> {{ bmi }}</p>  
+        <p><strong>Status:</strong> {{ message }}</p>        
+    </div>
+    {% endif %}
+</div>
+<div class="container mt-5">
+    <a href="{% url 'bmi:index' %}">Back to home page</a>
+</div>
+{% endblock content %}

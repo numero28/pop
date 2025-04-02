@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menses Calculator Result</title>
+</head>
+<body>
+    <h1>Menses Calculator Result</h1>
+    <p>Next Period Date: {{ next_period_date }}</p>
+    <p>Fertile Window: {{ fertile_window_start }} to {{ fertile_window_end }}</p>
+    <p>Safe Period: {{ safe_period_start }} to {{ safe_period_end }}</p>
+    <a href="{% url 'menses/menses_calculator' %}">Calculate Again</a>
+</body>
+</html>

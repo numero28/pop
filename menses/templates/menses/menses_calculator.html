@@ -1,0 +1,24 @@
+{% extends 'menses/base.html'%}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center">Menses Calculator</h2>
+    <form method="post" action="{% url 'menses:menses_calculator' %}" class="mt-4">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+    
+    {% if ovulation_date %}
+    <div class="mt-4 alert alert-info">
+        <p><strong>Estimated Next Period:</strong> {{ next_period_date }}</p>
+        <p><strong>Ovulation Date:</strong> {{ ovulation_date }}</p>
+        <p><strong>Fertile Window:</strong> {{ fertile_window_start }} to {{ fertile_window_end }}</p>
+    </div>
+    {% endif %}
+</div>
+<div class="container mt-5">
+    <a href="{% url 'menses:index' %}">Back to home page</a>
+</div>
+{% endblock content %}
+

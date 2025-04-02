@@ -1,0 +1,14 @@
+{% extends 'bmi/base.html' %}
+
+{% block content %}
+<h1 class="text-center">WELCOME TO PRINCIPLES OF PROGRAMMING</h1><br>
+<h2 class="text-center">You will find here some of the interesting projects developed in class</h2>
+<div class="mt-4 alert alert-info">
+    <ul>
+        <li>
+            <p><strong><a href="{% url 'bmi:bmi_calculator' %}"> BMI calculator</a> </strong></p>    
+       </li>
+    </ul>    
+    
+</div>
+{% endblock content %}
