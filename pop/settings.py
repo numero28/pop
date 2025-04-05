@@ -41,7 +41,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-&psk#na5l=p3q8
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ['ITC112.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ict112pop.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -170,4 +170,4 @@ STORAGES = {
     },
 }
 
-CSRF_TRUSTED_ORIGINS = ['https://hamishwillee.pythonanywhere.com']
+CSRF_TRUSTED_ORIGINS = ['https://ict112pop.pythonanywhere.com']
